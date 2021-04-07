@@ -34,7 +34,7 @@ makeCacheMatrix <- function(A = matrix()) {
   list(set = set, get = get, setinv = setinv, getinv = getinv)
 }
 
-# Solves for inverse of cached matrix store in memory address envirnment
+# Solves for inverse of cached matrix store in memory address environment
 # returned by makeCacheMatrix.
 
 cacheSolve <- function(A, ...) {
@@ -59,22 +59,4 @@ cacheSolve <- function(A, ...) {
   I
 }
 
-# # Generate a random and invertable square matrix for testing.
-# genRandSquareMatrix <- function() {
-#   # Create value for random seed
-#   s <- sample(1:10000,1,replace=T)
-#   
-#   # set random seed
-#   set.seed(s)
-#   
-#   # generate same of rows and columns of length n (random integers 3 to 100)
-#   n <- sample(3:100,1,replace=T)
-#   
-#   # Generate square matrix, which is of integer elements, and is invertable for
-#   # testing purposes
-#   matrix(sample.int(100, n*n, TRUE), n, n)
-# }
-# 
-# # Test code
-# cacheSolve(makeCacheMatrix(genRandSquareMatrix()))
 
